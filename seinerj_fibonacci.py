@@ -25,3 +25,8 @@ while LAST_FIB_NUM < 5000000:
 
 # visualization of sum of even fibonacchi numbers
 print(SUMMARIZATION)
+
+
+# problém je v tom že když na konci kontroluju jestli je to poslední šíslo sudé tak to vždycky nemusí fungovat, lepší
+# tam dát podmínku aby právě nebylo větší než to co jsem použil, protože to poslední číslo nemusí nutně být sudé a
+# přesto bude větší než podmínka
