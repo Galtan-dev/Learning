@@ -1,0 +1,6 @@
+ERROR - 2023-10-31 12:46:02,123 - Error occured
+INFO - 2023-10-31 12:46:02,124 - Data were saved
+ERROR - 2023-10-31 12:51:23,707 - Error occured
+INFO - 2023-10-31 12:51:23,707 - Data were saved
+INFO - 2023-10-31 12:51:23,707 - dummy function evaluated succesfully.
+ERROR - 2023-10-31 12:51:23,707 - TypeError occured in dummy function with dummy argument asdf

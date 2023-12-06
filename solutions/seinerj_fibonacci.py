@@ -16,8 +16,8 @@ while LAST_FIB_NUM < 5000000:
     TIME += 1
     # save last fib number from list to variable
     LAST_FIB_NUM = List_of_fib_nums[len(List_of_fib_nums) - 1]
-    # considering if last fibonacci number is even
-    if (LAST_FIB_NUM % 2) == 0:
+    # considering if last fibonacci number is even and smaller than condition
+    if (LAST_FIB_NUM % 2 == 0) and LAST_FIB_NUM < 5000000:
         # sum of all fibonacchi numbers till the condition allow continue
         SUMMARIZATION += LAST_FIB_NUM
     else:
@@ -25,8 +25,3 @@ while LAST_FIB_NUM < 5000000:
 
 # visualization of sum of even fibonacchi numbers
 print(SUMMARIZATION)
-
-
-# problém je v tom že když na konci kontroluju jestli je to poslední šíslo sudé tak to vždycky nemusí fungovat, lepší
-# tam dát podmínku aby právě nebylo větší než to co jsem použil, protože to poslední číslo nemusí nutně být sudé a
-# přesto bude větší než podmínka
