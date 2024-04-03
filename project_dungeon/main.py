@@ -1,9 +1,13 @@
+"""
+Script that is running dungeon script and making space for keybod inputs. Game dungeon.
+"""
+
 from dungeon import Dungeon
 import subprocess
 import time
 
 if __name__ == "__main__":
-
+    # input question
     load_game = input("Do you want continue in a previous game? (Y)ES or (N)O ")
     if load_game == "Y":
         # load previous game
@@ -12,24 +16,34 @@ if __name__ == "__main__":
         hero_name = dungeon.hero.name  # hero_name taken from the past game
         dungeon.update_map(dungeon.entities)  # update positioning from the past game
 
+    # if player dont want to load game
     elif load_game == "N":
+        # input for new name of hero
         hero_name = input("What is your name hero? ")
+        # dungeon script run
         dungeon = Dungeon(size=(10, 30), tunnel_number=40, hero_name=hero_name)
 
     else:
+        # exception if someone choose wrong input
         print("Wrong input")
         time.sleep(5)
         exit(0)
 
 
     while True:
+        # printing messages and dungeon
         subprocess.Popen("cls", shell=True).communicate()
         print(dungeon)
-        print(dungeon.status)
-        print(dungeon.message)
+        print(hero_name + " " + dungeon.hero.rank)
+        print(dungeon.status + "\n")
+        print(dungeon.message + "\n")
         dungeon.message = ""
 
-        action = input(f"Select an action {hero_name}: (L)EFT, (R)IGHT, (D)OWN, (U)P, (A)TTACK, (Q)UIT, (S)AVE, (I)nteract")
+        # action input question
+        action = input(f"Select an action {hero_name}: "
+                       f"(L)EFT, (R)IGHT, (D)OWN, (U)P, (A)TTACK, "
+                       f"(Q)UIT, (S)AVE, (I)nteract")
+        # non-play action
         if action == "Q":
             print("You coward!")
             exit(0)
@@ -39,10 +53,8 @@ if __name__ == "__main__":
             exit(0)
         else:
             dungeon.hero_action(action)
+
+        # condition for terminating
         if dungeon.hero.hp < 1:
             print(dungeon.message)
             exit(0)
-
-
-# při psuštění z cmd se to bude chovat hezky, nebude se to pořád dokola
-# vypisvat ale bude se přepisovat ten samý výtisk

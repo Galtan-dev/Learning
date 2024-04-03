@@ -1,0 +1,16 @@
+Implementované funkce
+    - beholder
+    - beholder fireball
+    - náhodný pohyb beholdera a nebourání do zdí
+    - systém trofejí a spawnutí beholdera až po nasbírání trofejí
+    - nová entita - fontána - healuje a doplňuje staminu
+    - ůtoky ubírají staminu
+    - po získání 10 xp hrdina levelupne
+        - level up zvyšuje base attack a ac
+    - beholder střílí fireaball pouze na vzdálenost 5 a menší manhattanské vzdálenosti
+    - jeli hráč v toumto radiu tak se beholder zastaví, když chodil nešel dohnat
+    - pod mapou dungeonu se zobrazuje jméno hrdiny a jeho titul
+    - pod titulem jsou hrdinovy statistiky
+    - pod statistikami jsou bojové zprávy
+    - vtipné situace
+        - pokud by hrdina interagoval s golbinem nebo beholderem místo s fontánou tak se mu něco stane...

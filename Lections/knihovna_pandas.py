@@ -116,6 +116,7 @@ df1.to_csv("data.csv", index=False)    # to excel, to html, to pickle, to jason,
 
 # loading data
 df5 = pd.read_csv("data.csv")
-print(df5)
+
+
 
 
